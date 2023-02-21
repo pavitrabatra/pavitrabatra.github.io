@@ -83,7 +83,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="index.html"><strong aria-hidden="true">1.</strong> User Guide</a></li><li class="chapter-item expanded "><a href="fractals/introduction.html"><strong aria-hidden="true">2.</strong> Fractals</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="fractals/introduction.html"><strong aria-hidden="true">2.1.</strong> Introduction</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="index.html"><strong aria-hidden="true">1.</strong> User Guide</a></li><li class="chapter-item expanded "><a href="SOC/index.html"><strong aria-hidden="true">2.</strong> SOC</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="SOC/intro.html"><strong aria-hidden="true">2.1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="SOC/fractals/introduction.html"><strong aria-hidden="true">2.2.</strong> Fractals</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="SOC/fractals/introduction.html"><strong aria-hidden="true">2.2.1.</strong> Introduction</a></li></ol></li><li class="chapter-item expanded "><a href="SOC/nature.html"><strong aria-hidden="true">2.3.</strong> SOC in Nature</a></li><li class="chapter-item expanded "><a href="SOC/sandpile/directed.html"><strong aria-hidden="true">2.4.</strong> Directed Sandpile</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -146,7 +146,8 @@
                     <main>
                         <h1 id="hello"><a class="header" href="#hello">Hello!</a></h1>
 <p>These are rolling set of notes primarily for archiving and personal use. They are updated as and when I get time.</p>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="fractals"><a class="header" href="#fractals">Fractals</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><p>These are lecture notes made out of course on Self Organised Criticality at IISER, Pune.</p>
+<div style="break-before: page; page-break-before: always;"></div><div style="break-before: page; page-break-before: always;"></div><h1 id="fractals"><a class="header" href="#fractals">Fractals</a></h1>
 <h2 id="the-fractal-geometry-of-nature-benoit-mandelbrot"><a class="header" href="#the-fractal-geometry-of-nature-benoit-mandelbrot">&quot;The fractal geometry of nature&quot;-Benoit Mandelbrot</a></h2>
 <h3 id="definition-of-fractal"><a class="header" href="#definition-of-fractal">Definition of fractal</a></h3>
 <p>A fractal is by definition a set for which the Hausdorff Besicovitch dimension strictly exceeds the topological dimension}
@@ -170,6 +171,37 @@ D&gt;D_{T}
 <p>Certain ill-defined transitions between zones of well-defined dimension are reinterpreted as being fractal zones within which \( D&gt;D_{T} \)</p>
 <h3 id="spatial-homogeneity-scaling-and-self-similarity-1"><a class="header" href="#spatial-homogeneity-scaling-and-self-similarity-1">Spatial Homogeneity, scaling and self similarity</a></h3>
 <p>Homogeneous distribution on a line, plane or space has two very desirable properties. It is invariant under displacement, and it is invariant under change of scale.</p>
+<div style="break-before: page; page-break-before: always;"></div><div style="break-before: page; page-break-before: always;"></div><p><em>Ref:</em> SOC lecture notes; Section-8, Theoretical studies of self-organized criticality(Physica A-2006)</p>
+<h1 id="the-directed-abelian-sandpile-model"><a class="header" href="#the-directed-abelian-sandpile-model">The Directed Abelian Sandpile Model</a></h1>
+<ul>
+<li>Variant of BTW mdel and much more tractable analytically. </li>
+<li>Existence of a preffered direction, particles fall in only one direction(down).</li>
+<li>There can be two knds of pile a conical or tent shaped pile.</li>
+</ul>
+<h2 id="model-description"><a class="header" href="#model-description">Model Description</a></h2>
+<ul>
+<li>Taking square lattice the problem can be described as convention that occupation is only possible at sites such that \( X+Y = even \) or a square lattice oriented in \( (1,1) \) direction.</li>
+<li>Can also be thought of as child playing with wooden blocks on staircase.</li>
+</ul>
+<p><img src="SOC/sandpile/images/lattice.png" alt="Lattice" /></p>
+<ul>
+<li>Sand Grains are added anywhere on top edge with equal probability.</li>
+<li>On each toppling, one grain of sand is transferred to <mark>each of the two</mark> downward neighbors.</li>
+<li>Particles leave the system if there is a toppling at the bottom layer.</li>
+<li>For any site the stable heights are either \( 0 \) or \( 1 \)</li>
+</ul>
+<p>We can give the time evolution for the heights as<br />
+If \( Z(X,Y) \geq 2 \) then
+\begin{cases}
+Z(X,Y) \rightarrow Z(X,Y) = 2 \\
+Z(X \pm 1, Y \pm 1) \rightarrow Z(X \pm 1, Y \pm 1) + 1 
+\end{cases}</p>
+<p>We want to ask questions such as, What is...</p>
+<ul>
+<li>Steady State</li>
+<li>Avalnche Distribution</li>
+<li>Avalanche Shapes and so on..</li>
+</ul>
 
                     </main>
 
